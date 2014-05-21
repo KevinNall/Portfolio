@@ -4,4 +4,9 @@ class HomepageController < ApplicationController
 
   def contact_me
   end
+
+  def ajax
+  end
+
+
 end

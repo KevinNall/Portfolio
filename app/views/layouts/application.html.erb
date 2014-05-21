@@ -1,7 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Portfolio</title>
+  <title>Kevin Nall's Portfolio and Blog </title>
+
+  <ul class="nav nav-pills">
+  		<li class="active"><%= link_to 'Homepage', homepage_index_path%></li>
+  		<li><%= link_to 'About Me', homepage_about_me_path%></li>
+  		<li><%= link_to 'Contact Me', homepage_contact_me_path%></li>
+  </ul>
+
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -12,6 +19,7 @@
 
 </head>
 <body>
+
 
 <%= yield %>
 

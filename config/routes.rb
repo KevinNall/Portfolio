@@ -1,13 +1,23 @@
 Rails.application.routes.draw do
+  root 'homepage#index'
+
+  get 'homepage/index'
+
   get 'homepage/about_me'
 
   get 'homepage/contact_me'
+
+  get 'homepage/ajax2'
+
+  get 'blog_posts/index'
 
   resources :blog_comments
 
   resources :blog_posts
 
   resources :blogs
+
+  resources :homepage
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
