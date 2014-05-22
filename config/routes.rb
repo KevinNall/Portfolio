@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :views
+  devise_for :users
   root 'homepage#index'
 
   get 'homepage/index'
@@ -10,6 +12,12 @@ Rails.application.routes.draw do
   get 'homepage/ajax2'
 
   get 'blog_posts/index'
+
+  get 'blog_comments/index'
+
+  get 'blogs/index'
+
+  get 'homepage/marta'
 
   resources :blog_comments
 

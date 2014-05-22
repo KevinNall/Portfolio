@@ -1,4 +1,10 @@
 class HomepageController < ApplicationController
+  	
+  	require 'open-uri'
+  	require 'json'
+
+
+
   def about_me
   end
 
@@ -8,5 +14,8 @@ class HomepageController < ApplicationController
   def ajax
   end
 
+  def marta
+  	@results = JSON.parse(open("http://developer.itsmarta.com/BRDRestService/BRDRestService.svc/GetAllBus").read)
+  end
 
 end

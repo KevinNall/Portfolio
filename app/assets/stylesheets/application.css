@@ -12,5 +12,35 @@
  *
  *= require_tree .
  *= require_self
+*/
 
- 
+.mypage { 
+  background: url('http://carillon-beach.com/images/plates/large/beach-1.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+h2 {
+	color:white;
+	text-align: center;
+}
+
+body {
+	color:black;
+	text-align: center;
+	
+}
+
+label {
+	color:black;
+	text-align: center;
+}
+
+.panel{
+	background-color:rgba(255,255,255,.5);
+}
+
+
+

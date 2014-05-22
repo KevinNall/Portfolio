@@ -3,24 +3,37 @@
 <head>
   <title>Kevin Nall's Portfolio and Blog </title>
 
-  <ul class="nav nav-pills">
-  		<li class="active"><%= link_to 'Homepage', homepage_index_path%></li>
-  		<li><%= link_to 'About Me', homepage_about_me_path%></li>
-  		<li><%= link_to 'Contact Me', homepage_contact_me_path%></li>
-  </ul>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-
-
 </head>
-<body>
+
+<body class="mypage">
 
 
+  <nav class="navbar navbar-inverse" role="navigation">
+  	 <a class="navbar-brand" href="/homepage/index">Home</a>
+      <a class="navbar-brand" href="/homepage/about_me">About Me</a>
+      <a class="navbar-brand" href="/homepage/contact_me">Contact Me</a>
+      <a class="navbar-brand" href="/blogs/index">Blogs</a>
+      <a class="navbar-brand" href="/blog_posts/index">Blog Posts</a>
+      <a class="navbar-brand" href="/blog_comments/index">Blog Comment</a>
+  </nav>
+
+    <% if user_signed_in? %>
+
+    <%= link_to "SIgn out",destroy_user_session_path, method: :delete, class: "button" %>
+
+    <% else %>
+
+    <%= link_to "Sign in",new_user_session_path %>
+
+    <% end %>
+  
 <%= yield %>
 
 </body>
