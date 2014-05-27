@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+  
   <title>Kevin Nall's Portfolio and Blog </title>
+
+  <link rel="icon" 
+        type="image/jpg" 
+        href="http://stickurz.com/1350-thickbox_default/palm-tree.jpg">
 
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 
@@ -15,24 +20,28 @@
 <body class="mypage">
 
 
-  <nav class="navbar navbar-inverse" role="navigation">
+<nav class="navbar navbar-inverse" role="navigation">
   	 <a class="navbar-brand" href="/homepage/index">Home</a>
       <a class="navbar-brand" href="/homepage/about_me">About Me</a>
       <a class="navbar-brand" href="/homepage/contact_me">Contact Me</a>
       <a class="navbar-brand" href="/blogs/index">Blogs</a>
       <a class="navbar-brand" href="/blog_posts/index">Blog Posts</a>
       <a class="navbar-brand" href="/blog_comments/index">Blog Comment</a>
-  </nav>
 
-    <% if user_signed_in? %>
+      <form class="navbar-form pull-right">
+      
+        <% if user_signed_in? %>
 
-    <%= link_to "SIgn out",destroy_user_session_path, method: :delete, class: "button" %>
+        <%= link_to "Sign out",destroy_user_session_path, method: :delete, class: "button" %>
 
-    <% else %>
+        <% else %>
 
-    <%= link_to "Sign in",new_user_session_path %>
+        <%= link_to "Sign in",new_user_session_path %>
 
-    <% end %>
+        <%end%>
+  
+      </form>
+</nav>
   
 <%= yield %>
 

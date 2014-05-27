@@ -27,11 +27,6 @@ h2 {
 	text-align: center;
 }
 
-body {
-	color:black;
-	text-align: center;
-	
-}
 
 label {
 	color:black;
@@ -39,8 +34,26 @@ label {
 }
 
 .panel{
+	position:absolute;
 	background-color:rgba(255,255,255,.5);
+	text-align: center;
+	text-align: center;
+	width:620px;
+	padding:10px;
+	margin: center;
+    top:20%;
+    left:25%;
 }
 
-
+.panel2{
+	position:absolute;
+	background-color:rgba(255,255,255,.5);
+	text-align: center;
+	text-align: center;
+	width:220px;
+	padding:10px;
+	margin: center;
+    top:20%;
+    left:41%;
+}
 
