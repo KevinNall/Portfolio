@@ -1,5 +1,10 @@
 <h1>Editing blog</h1>
 
+<%= form_for @blog, :url => blogs_path, :html => { :multipart => true } do |form| %>
+  <%= form.file_field :avatar %>
+<% end %>
+
+
 <%= render 'form' %>
 
 <%= link_to 'Show', @blog %> |
